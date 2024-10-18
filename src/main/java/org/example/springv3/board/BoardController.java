@@ -32,7 +32,7 @@ public class BoardController {
     public ResponseEntity<?> removeBoard(@PathVariable("id") Integer id, HttpServletRequest request) {
         User sessionUser = (User) session.getAttribute("sessionUser");
         boardService.게시글삭제하기(id, sessionUser);
-        return ResponseEntity.ok(null);
+        return ResponseEntity.ok(Resp.ok(null));
     }
 
 
