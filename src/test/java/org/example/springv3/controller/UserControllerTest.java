@@ -110,6 +110,8 @@ public class UserControllerTest {
         System.out.println(responseJwt);
 
 
+
+
         //then
         //헤더는 확인하는 방법이 다르다. 헤더부분을 확인한다. 시작부분이 Bearer로 시작하는지 혹은 이 헤더가 null이 아니면 토큰이 있는 것이다.
         actions.andExpect(header().string("Authorization", Matchers.notNullValue()));
